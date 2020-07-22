@@ -1,0 +1,282 @@
+@import url("https://fonts.cdnfonts.com/css/devonshire");
+@import url("https://fonts.cdnfonts.com/css/croissant-one");
+@import url("https://fonts.cdnfonts.com/css/dancing-script");
+@import url("https://fonts.cdnfonts.com/css/kaushan-script");
+@import url("https://fonts.cdnfonts.com/css/komika-text");
+body {
+  margin: auto;
+  font-size: 1vw;
+}
+
+footer, button {
+  background-color: #579c87;
+  color: #fdcb46;
+  text-align: center;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+header {
+  background: no-repeat url("../Images/15718411148892_Logo-ohmyfood.png") center/contain #579c87;
+  height: 10vh;
+}
+
+#logo {
+  margin: 0;
+}
+
+section {
+  width: 90%;
+  margin: 20px auto;
+  background-color: white;
+  color: #fdcb46;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.note {
+  width: 2em;
+}
+
+article {
+  margin: 20px;
+  width: 40vw;
+  height: 56.57vw;
+  box-shadow: 4px 4px 1em grey;
+  position: relative;
+}
+article .center {
+  width: 100%;
+  vertical-align: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+article a {
+  display: block;
+  height: 100%;
+}
+
+button {
+  display: block;
+  min-width: 200px;
+  margin: 20px auto 120px;
+  border-radius: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+footer a {
+  padding: 0px 20px;
+  margin: 0px;
+  color: #fdcb46;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.menu-LNE {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fcdfdb;
+  font-size: 3rem;
+  color: #3d1319;
+}
+.menu-LNE h2 {
+  font-family: "Komika Text", sans-serif;
+  color: #3d1319;
+}
+.menu-LNE .logo-LNE {
+  font-family: Devonshire, sans-serif;
+  color: #3c1218;
+  text-align: center;
+}
+
+.detail-LNE {
+  width: 75vw;
+  max-width: 1280px;
+  height: 106vw;
+  font-family: "Komika Text", sans-serif;
+  padding: 0px 30px;
+  margin: auto auto 120px auto;
+  font-size: 2vw;
+  color: #3d1319;
+}
+.detail-LNE h3 {
+  text-align: center;
+  margin-top: 50px;
+  line-height: 16px;
+}
+.detail-LNE h3 .left {
+  float: left;
+  width: 30%;
+}
+.detail-LNE h3 .right {
+  float: right;
+  width: 30%;
+}
+
+.menu-LCF {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fff5fe;
+  font-size: 3rem;
+  color: #c77412;
+}
+.menu-LCF h2 {
+  font-family: "croissant one", sans-serif;
+  color: #c77412;
+}
+.menu-LCF .logo-LCF {
+  font-family: "croissant one", sans-serif;
+  background: linear-gradient(90deg, #e69630 0%, #8f5aff 100%);
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.detail-LCF {
+  width: 75vw;
+  max-width: 1280px;
+  height: 106vw;
+  font-family: "Komika Text", sans-serif;
+  padding: 0px 30px;
+  margin: auto auto 120px auto;
+  font-size: 2vw;
+  color: #000;
+}
+.detail-LCF h3 {
+  text-align: center;
+  margin-top: 50px;
+  line-height: 16px;
+}
+.detail-LCF h3 .left {
+  float: left;
+  width: 30%;
+}
+.detail-LCF h3 .right {
+  float: right;
+  width: 30%;
+  transform: scaleX(-1);
+}
+.detail-LCF .entree {
+  color: #c67412;
+}
+.detail-LCF .plat {
+  color: #a6689a;
+}
+.detail-LCF .dessert {
+  color: #6e4ccc;
+}
+
+.menu-LDP {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f9f9f9;
+  font-size: 3rem;
+  color: #0887fb;
+}
+.menu-LDP h2 {
+  font-family: "Komika Text", sans-serif;
+  color: #0887fb;
+}
+.menu-LDP .logo-LDP {
+  font-family: "Dancing Script", sans-serif;
+  background: linear-gradient(90deg, #2252e5 0%, #7abefb 100%);
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.detail-LDP {
+  width: 75vw;
+  max-width: 1280px;
+  height: 106vw;
+  font-family: "Komika Text", sans-serif;
+  padding: 0px 30px;
+  margin: auto auto 120px auto;
+  font-size: 2vw;
+  color: #3f3f3f;
+}
+.detail-LDP h3 {
+  text-align: center;
+  margin-top: 50px;
+  line-height: 16px;
+}
+.detail-LDP h3 .left {
+  float: left;
+  width: 30%;
+}
+.detail-LDP h3 .right {
+  float: right;
+  width: 30%;
+  transform: scaleX(-1);
+}
+
+.menu-LPG {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fdfffd;
+  font-size: 3rem;
+  color: #72bf56;
+}
+.menu-LPG h2 {
+  font-family: "Komika Text", sans-serif;
+  color: #72bf56;
+}
+.menu-LPG .logo-LPG {
+  font-family: "Kaushan Script", sans-serif;
+  background: linear-gradient(90deg, #3e923a 0%, #bdfe7e 100%);
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.detail-LPG {
+  width: 75vw;
+  max-width: 1280px;
+  height: 106vw;
+  font-family: "Komika Text", sans-serif;
+  padding: 0px 30px;
+  margin: auto auto 120px auto;
+  font-size: 2vw;
+  color: #0c0c0c;
+}
+.detail-LPG h3 {
+  text-align: center;
+  margin-top: 50px;
+  line-height: 16px;
+}
+.detail-LPG h3 .left {
+  float: left;
+  width: 30%;
+}
+.detail-LPG h3 .right {
+  float: right;
+  width: 30%;
+  transform: scaleX(-1);
+}
+
+.prix {
+  float: right;
+}
+
+/*# sourceMappingURL=style.css.map */

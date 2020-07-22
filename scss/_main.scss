@@ -1,0 +1,86 @@
+@mixin main-page($background-col) {
+	background-color: $background-col;
+	color: $main-text-col;
+	text-align: center;
+}
+
+body {
+	margin: auto;
+	font-size: 1vw;
+}
+
+footer, button {
+	@include main-page($main-parts-col);
+	font-size: 2rem;
+	padding: 10px;
+
+}
+
+header {
+	background: no-repeat url("../Images/15718411148892_Logo-ohmyfood.png") center/contain $main-parts-col;
+	height: 10vh;
+}
+
+#logo {
+  margin: 0;
+}
+
+section {
+	width: 90%;
+	margin: 20px auto;
+	@include main-page($main-corps-col);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.note {
+	width: 2em;
+}
+
+article {
+	margin: 20px;
+	width: 40vw;
+//	max-width: 500px;
+	height: 56.57vw;
+//	max-height: 707px;
+	box-shadow: 4px 4px 1em grey;
+	position: relative;
+	.center {
+		width: 100%;
+		vertical-align: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	a {
+		display:block;
+		height: 100%;
+	}
+}
+
+button {
+	display: block;
+	min-width: 200px;
+	margin: 20px auto 120px;
+	border-radius: 10px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	a {
+		padding: 0px 20px;
+		margin: 0px;
+		color: $main-text-col;
+		text-decoration: none;
+	}
+}
+

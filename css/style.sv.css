@@ -1,0 +1,136 @@
+@import url("https://fonts.cdnfonts.com/css/devonshire");
+@import url("https://fonts.cdnfonts.com/css/croissant-one");
+@import url("https://fonts.cdnfonts.com/css/dancing-script");
+@import url("https://fonts.cdnfonts.com/css/kaushan-script");
+@import url("https://fonts.cdnfonts.com/css/komika-text");
+html {
+  font-size: 1vw;
+}
+body {
+  margin: auto 0px;
+}
+
+footer, button {
+  background-color: #579c87;
+  color: #fdcb46;
+  text-align: center;
+  font-size: 2rem;
+}
+header {
+  height: 20vh;
+  background: no-repeat url("../Images/15718411148892_Logo-ohmyfood.png") center/contain #579c87;
+  width: 100%;
+}
+#logo {
+  margin: 0;
+}
+
+section {
+  max-width: 90vw;
+  margin: 40px auto;
+  background-color: main-corps-col;
+  color: #fdcb46;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+article {
+  margin: 20px;
+  width: 40vw;
+  height: 56.57vw;
+  box-shadow: 4px 4px 1em grey;
+  position: relative;
+}
+article .center {
+  width: 100%;
+  vertical-align: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+article a {
+  display: block;
+  height: 100%;
+}
+
+button {
+  display: block;
+  font-size: 2;
+  min-width: 200px;
+  margin: 20px auto 170px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*font-size: 1em;*/
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+footer p {
+  margin: 0px;
+  padding: 20px 20px;
+}
+
+.menu-LNE {
+  background-color: #fcdfdb;
+  font-family: Devonshire, sans-serif;
+  font-size:3rem;
+}
+.menu-LNE .logo-LNE {
+  color: #3c1218;
+}
+.menu-LCF {
+  background-color: #fff5fe;
+  font-family: "croissant one", sans-serif;
+  font-size: 3rem;
+  color: #c77412;
+}
+.menu-LCF .logo-LCF {
+  background: linear-gradient(90deg, #e69630 0%, #8f5aff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu-LDP {
+  background-color: #f9f9f9;
+  font-family: "Dancing Script", sans-serif;
+  font-size: 3rem;
+  color: #0887fb;
+}
+.menu-LDP .logo-LDP {
+  background: linear-gradient(90deg, #2252e5 0%, #7abefb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu-LPG {
+  background-color: #fdfffd;
+  font-family: "Kaushan Script", sans-serif;
+  font-size: 3rem;
+  color: #72bf56;
+}
+.menu-LPG .logo-LPG {
+  background: linear-gradient(90deg, #3e923a 0%, #bdfe7e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.detail-LNE {
+  font-family: "Komika Text", sans-serif;
+}
+
+.prix {
+  float: right;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,85 @@
+@import url('https://fonts.cdnfonts.com/css/devonshire');
+@import url('https://fonts.cdnfonts.com/css/croissant-one');
+@import url('https://fonts.cdnfonts.com/css/dancing-script');
+@import url('https://fonts.cdnfonts.com/css/kaushan-script');
+
+@import url('https://fonts.cdnfonts.com/css/komika-text');
+
+h1 {
+	text-align: center;
+	font-size: 3rem;
+}
+
+@for $i from 1 through length($restos) {
+	.menu-#{nth($restos, $i)} {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		background-color: nth($menu-bg, $i);
+		font-size: 3rem;
+		color: nth($font-colors, $i);
+		& h2 {
+			font-family: nth($menu-font, $i), sans-serif;
+			color: nth($font-colors, $i);
+		}
+		@if (nth($restos, $i) != "LNE") {
+			& .logo-#{nth($restos, $i)} {
+				font-family: nth($fonts-garde, $i), sans-serif;
+				background: linear-gradient(90deg, nth($gradient-from, $i) 0%, nth($gradient-to, $i) 100%);
+				text-align: center;
+			    -webkit-background-clip: text;
+			    -webkit-text-fill-color: transparent;
+			}
+		}
+		@else {
+			& .logo-#{nth($restos, $i)} {
+				font-family: nth($fonts-garde, $i), sans-serif;
+				color: #3c1218;
+				text-align: center;
+			}
+		}
+	}
+
+	.detail-#{nth($restos, $i)} {
+		width: 75vw;
+		max-width: 1280px;
+		height: 106vw;
+		font-family: nth($menu-font, 1), sans-serif;
+		padding: 0px 30px;
+		margin: auto auto 120px auto;
+		font-size: 2vw;
+		color: nth($carte-font-colors, $i);
+		h3 {
+			text-align: center;
+			margin-top: 50px;
+			line-height: 16px;
+			& .left {
+				float: left;
+				width: 30%;
+			}
+			& .right {
+				float: right;
+				width: 30%;
+				@if (nth($restos, $i) != "LNE") {
+					transform: scaleX(-1);
+				}
+			}
+		}
+		@if (nth($restos, $i) == "LCF") {
+			& .entree {
+				color: #c67412;
+			}
+			& .plat {
+				color: #a6689a;
+			}
+			& .dessert {
+				color: #6e4ccc;
+			}
+		}
+	}
+}
+
+.prix {
+	float: right;
+}
+
