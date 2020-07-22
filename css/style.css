@@ -26,7 +26,7 @@ header {
 }
 
 section {
-  width: 90%;
+  width: 70%;
   margin: 20px auto;
   background-color: white;
   color: #fdcb46;
@@ -37,14 +37,9 @@ section {
   justify-content: space-around;
 }
 
-.note {
-  width: 2em;
-}
-
 article {
   margin: 20px;
-  width: 40vw;
-  height: 56.57vw;
+  width: 40%;
   box-shadow: 4px 4px 1em grey;
   position: relative;
 }
@@ -59,6 +54,7 @@ article .center {
 article a {
   display: block;
   height: 100%;
+  padding-top: 141.42%;
 }
 
 button {
@@ -94,7 +90,7 @@ h1 {
   flex-direction: column;
   justify-content: space-around;
   background-color: #fcdfdb;
-  font-size: 3rem;
+  font-size: 2vw;
   color: #3d1319;
 }
 .menu-LNE h2 {
@@ -106,15 +102,17 @@ h1 {
   color: #3c1218;
   text-align: center;
 }
+.menu-LNE .note {
+  width: 2em;
+}
 
 .detail-LNE {
-  width: 75vw;
-  max-width: 1280px;
-  height: 106vw;
+  width: 60vw;
+  height: 85vw;
   font-family: "Komika Text", sans-serif;
-  padding: 0px 30px;
+  padding: 0px 50px;
   margin: auto auto 120px auto;
-  font-size: 2vw;
+  font-size: 1.8vw;
   color: #3d1319;
 }
 .detail-LNE h3 {
@@ -124,11 +122,11 @@ h1 {
 }
 .detail-LNE h3 .left {
   float: left;
-  width: 30%;
+  width: 25%;
 }
 .detail-LNE h3 .right {
   float: right;
-  width: 30%;
+  width: 25%;
 }
 
 .menu-LCF {
@@ -136,7 +134,7 @@ h1 {
   flex-direction: column;
   justify-content: space-around;
   background-color: #fff5fe;
-  font-size: 3rem;
+  font-size: 2vw;
   color: #c77412;
 }
 .menu-LCF h2 {
@@ -152,13 +150,12 @@ h1 {
 }
 
 .detail-LCF {
-  width: 75vw;
-  max-width: 1280px;
-  height: 106vw;
+  width: 60vw;
+  height: 85vw;
   font-family: "Komika Text", sans-serif;
-  padding: 0px 30px;
+  padding: 0px 50px;
   margin: auto auto 120px auto;
-  font-size: 2vw;
+  font-size: 1.8vw;
   color: #000;
 }
 .detail-LCF h3 {
@@ -168,11 +165,11 @@ h1 {
 }
 .detail-LCF h3 .left {
   float: left;
-  width: 30%;
+  width: 25%;
 }
 .detail-LCF h3 .right {
   float: right;
-  width: 30%;
+  width: 25%;
   transform: scaleX(-1);
 }
 .detail-LCF .entree {
@@ -190,7 +187,7 @@ h1 {
   flex-direction: column;
   justify-content: space-around;
   background-color: #f9f9f9;
-  font-size: 3rem;
+  font-size: 2vw;
   color: #0887fb;
 }
 .menu-LDP h2 {
@@ -206,13 +203,12 @@ h1 {
 }
 
 .detail-LDP {
-  width: 75vw;
-  max-width: 1280px;
-  height: 106vw;
+  width: 60vw;
+  height: 85vw;
   font-family: "Komika Text", sans-serif;
-  padding: 0px 30px;
+  padding: 0px 50px;
   margin: auto auto 120px auto;
-  font-size: 2vw;
+  font-size: 1.8vw;
   color: #3f3f3f;
 }
 .detail-LDP h3 {
@@ -222,11 +218,11 @@ h1 {
 }
 .detail-LDP h3 .left {
   float: left;
-  width: 30%;
+  width: 25%;
 }
 .detail-LDP h3 .right {
   float: right;
-  width: 30%;
+  width: 25%;
   transform: scaleX(-1);
 }
 
@@ -235,7 +231,7 @@ h1 {
   flex-direction: column;
   justify-content: space-around;
   background-color: #fdfffd;
-  font-size: 3rem;
+  font-size: 2vw;
   color: #72bf56;
 }
 .menu-LPG h2 {
@@ -251,13 +247,12 @@ h1 {
 }
 
 .detail-LPG {
-  width: 75vw;
-  max-width: 1280px;
-  height: 106vw;
+  width: 60vw;
+  height: 85vw;
   font-family: "Komika Text", sans-serif;
-  padding: 0px 30px;
+  padding: 0px 50px;
   margin: auto auto 120px auto;
-  font-size: 2vw;
+  font-size: 1.8vw;
   color: #0c0c0c;
 }
 .detail-LPG h3 {
@@ -267,16 +262,82 @@ h1 {
 }
 .detail-LPG h3 .left {
   float: left;
-  width: 30%;
+  width: 25%;
 }
 .detail-LPG h3 .right {
   float: right;
-  width: 30%;
+  width: 25%;
   transform: scaleX(-1);
 }
 
 .prix {
   float: right;
+}
+
+.boing {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0px 5px;
+  background: #fdcb46;
+  animation: jump 1.5s linear infinite;
+}
+.boing:nth-child(2) {
+  animation-delay: -1.25s;
+}
+.boing:nth-child(3) {
+  animation-delay: -1s;
+}
+
+@keyframes jump {
+  0%, 50%, 100% {
+    transform: initial;
+  }
+  25% {
+    transform: translateY(-1rem);
+  }
+}
+footer a {
+  animation: wiggle 1s infinite;
+}
+footer a:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateX(4px);
+  }
+  15%, 45% {
+    transform: translateX(-4px);
+  }
+  30%, 60% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: initial;
+  }
+}
+.souligner {
+  position: relative;
+}
+
+.souligner:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #ff0043 0%, #fff100 100%);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.souligner:hover:before {
+  visibility: visible;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

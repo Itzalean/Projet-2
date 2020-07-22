@@ -26,7 +26,7 @@ header {
 }
 
 section {
-	width: 90%;
+	width: 70%;
 	margin: 20px auto;
 	@include main-page($main-corps-col);
 	display: flex;
@@ -35,16 +35,9 @@ section {
 	justify-content: space-around;
 }
 
-.note {
-	width: 2em;
-}
-
 article {
 	margin: 20px;
-	width: 40vw;
-//	max-width: 500px;
-	height: 56.57vw;
-//	max-height: 707px;
+	width: 40%;
 	box-shadow: 4px 4px 1em grey;
 	position: relative;
 	.center {
@@ -56,8 +49,9 @@ article {
 		transform: translate(-50%, -50%);
 	}
 	a {
-		display:block;
+		display: block;
 		height: 100%;
+		padding-top: 141.42%;
 	}
 }
 
@@ -83,4 +77,3 @@ footer {
 		text-decoration: none;
 	}
 }
-

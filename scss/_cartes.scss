@@ -16,7 +16,7 @@ h1 {
 		flex-direction: column;
 		justify-content: space-around;
 		background-color: nth($menu-bg, $i);
-		font-size: 3rem;
+		font-size: 2vw;
 		color: nth($font-colors, $i);
 		& h2 {
 			font-family: nth($menu-font, $i), sans-serif;
@@ -37,17 +37,19 @@ h1 {
 				color: #3c1218;
 				text-align: center;
 			}
+			.note {
+				width: 2em;
+			}
 		}
 	}
 
 	.detail-#{nth($restos, $i)} {
-		width: 75vw;
-		max-width: 1280px;
-		height: 106vw;
+		width: 60vw;
+		height: 85vw;
 		font-family: nth($menu-font, 1), sans-serif;
-		padding: 0px 30px;
+		padding: 0px 50px;
 		margin: auto auto 120px auto;
-		font-size: 2vw;
+		font-size: 1.8vw;
 		color: nth($carte-font-colors, $i);
 		h3 {
 			text-align: center;
@@ -55,11 +57,11 @@ h1 {
 			line-height: 16px;
 			& .left {
 				float: left;
-				width: 30%;
+				width: 25%;
 			}
 			& .right {
 				float: right;
-				width: 30%;
+				width: 25%;
 				@if (nth($restos, $i) != "LNE") {
 					transform: scaleX(-1);
 				}
@@ -82,4 +84,3 @@ h1 {
 .prix {
 	float: right;
 }
-

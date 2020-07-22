@@ -1,0 +1,64 @@
+.boing {
+	display:inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	margin: 0px 5px;
+	background: $main-text-col;
+	animation: jump 1.5s linear infinite;
+	&:nth-child(2) {
+		animation-delay: -1.25s;
+	}
+	&:nth-child(3) {
+		animation-delay: -1.0s;
+	}
+}
+@keyframes jump {
+	0%, 50%, 100% {
+		transform: initial;
+	}
+	25% {
+		transform: translateY(-1rem);
+	}
+}
+
+footer a {
+	animation: wiggle 1s infinite;
+	&:nth-child(2) {
+		animation-delay: 0.5s;
+	}
+}
+@keyframes wiggle {
+	0% {
+		transform: translateX(4px);
+	}
+	15%, 45% {
+		transform: translateX(-4px);
+	}
+	30%, 60% {
+		transform: translateX(4px);
+	}
+	75% {
+		transform: initial;
+	}
+}
+
+.souligner {
+	position: relative;
+}
+.souligner:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(90deg, rgba(255,0,67,1) 0%, rgba(255,241,0,1) 100%);
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+}
+
+.souligner:hover:before {
+	visibility: visible;
+	width: 100%;
+}
