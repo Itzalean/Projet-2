@@ -26,7 +26,7 @@ body {
 }
 
 .cadre {
-  margin: 20 auto;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -186,7 +186,7 @@ footer a {
 
 @media screen and (min-width: 700px) {
   .detail {
-    margin: 20 auto;
+    margin: 20px auto;
     width: 90%;
     max-width: 1180px;
     height: 127vw;
