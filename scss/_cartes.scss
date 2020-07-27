@@ -1,86 +1,117 @@
-@import url('https://fonts.cdnfonts.com/css/devonshire');
-@import url('https://fonts.cdnfonts.com/css/croissant-one');
-@import url('https://fonts.cdnfonts.com/css/dancing-script');
-@import url('https://fonts.cdnfonts.com/css/kaushan-script');
-
-@import url('https://fonts.cdnfonts.com/css/komika-text');
-
-h1 {
-	text-align: center;
+.enteteDetail {
 	font-size: 3rem;
+	@include mobile {
+		display: none;
+	}
+}
+@include not-mobile {
+	.detail {
+		margin: 20 auto;
+		width: 90%;
+		max-width: 1180px;
+		height: 127vw;
+		max-height: 1669px;
+	}
 }
 
+// Bouclede génération du css de chaque page de menu
 @for $i from 1 through length($restos) {
-	.menu-#{nth($restos, $i)} {
+
+	.detail__#{nth($restos, $i)} {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
+		align-items: center;
+		margin: auto auto 120px auto;
 		background-color: nth($menu-bg, $i);
-		font-size: 2vw;
-		color: nth($font-colors, $i);
-		& h2 {
-			font-family: nth($menu-font, $i), sans-serif;
-			color: nth($font-colors, $i);
+		@include not-mobile {
+			height: 100%;
+			justify-content: space-evenly;
 		}
-		@if (nth($restos, $i) != "LNE") {
-			& .logo-#{nth($restos, $i)} {
-				font-family: nth($fonts-garde, $i), sans-serif;
+		.logo__#{nth($restos, $i)} {
+			text-align: center;
+			font: 2rem nth($fonts-garde, $i), sans-serif;
+			@if (nth($restos, $i) == "LNE") {
+				&--img {
+					width: 25%;
+				}
+			}
+			@else {
 				background: linear-gradient(90deg, nth($gradient-from, $i) 0%, nth($gradient-to, $i) 100%);
-				text-align: center;
 			    -webkit-background-clip: text;
 			    -webkit-text-fill-color: transparent;
 			}
-		}
-		@else {
-			& .logo-#{nth($restos, $i)} {
-				font-family: nth($fonts-garde, $i), sans-serif;
-				color: #3c1218;
-				text-align: center;
-			}
-			.note {
-				width: 2em;
+			@include not-mobile {
+				font-size: 4rem;
 			}
 		}
 	}
 
-	.detail-#{nth($restos, $i)} {
-		width: 60vw;
-		height: 85vw;
-		font-family: nth($menu-font, 1), sans-serif;
-		padding: 0px 50px;
-		margin: auto auto 120px auto;
-		font-size: 1.8vw;
-		color: nth($carte-font-colors, $i);
-		h3 {
-			text-align: center;
-			margin-top: 50px;
-			line-height: 16px;
-			& .left {
-				float: left;
+	.entree__#{nth($restos, $i)},
+	.plat__#{nth($restos, $i)},
+	.dessert__#{nth($restos, $i)} {
+		width: 90%;
+		font-family: nth($menu-font, $i), sans-serif;
+		font-size: nth($nMobile-font-size, $i);
+		@include mobile {
+			font-size: nth($mobile-font-size, $i);
+		}
+		@if (nth($restos, $i) != "LCF") {
+			color: nth($carte-font-colors, $i);
+		}
+	}
+	.titre__#{nth($restos, $i)} {
+		text-align: center;
+		width: 100%;
+		line-height: 8px;
+		@include not-mobile {
+			font-size: 1.5rem;
+		}
+		&--left {
+			width: 20%;
+			float: left;
+			@include not-mobile {
 				width: 25%;
-			}
-			& .right {
-				float: right;
-				width: 25%;
-				@if (nth($restos, $i) != "LNE") {
-					transform: scaleX(-1);
-				}
 			}
 		}
-		@if (nth($restos, $i) == "LCF") {
-			& .entree {
-				color: #c67412;
+		&--right {
+			width: 20%;
+			float: right;
+			@if (nth($restos, $i) != "LNE") {
+				transform: scaleX(-1);
 			}
-			& .plat {
-				color: #a6689a;
-			}
-			& .dessert {
-				color: #6e4ccc;
+			@include not-mobile {
+				width: 25%;
 			}
 		}
 	}
 }
 
-.prix {
+// Logo spécifique au bas de page de "La note enchantée"
+.logo__bottom {
+	font-family: devonshire, sans-serif;
+	font-size: 2rem;
+	text-align: center;
+	&--img {
+		vertical-align: middle;
+		width: 12%;
+	}
+}
+
+// Couleurs spécifiques au texte pour "Le chic à la française"
+.entree__LCF {
+	color: #c67412;
+}
+.plat__LCF {
+	color: #a6689a;
+}
+.dessert__LCF {
+	color: #6e4ccc;
+}
+
+.entree--prix, .plat--prix, .dessert__prix {
 	float: right;
+	@include mobile {
+		color: red;
+	}
 }

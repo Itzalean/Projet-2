@@ -1,3 +1,4 @@
+// Points kissôtent dans le bouton
 .boing {
 	display:inline-block;
 	width: 8px;
@@ -22,6 +23,7 @@
 	}
 }
 
+// Gigotages
 footer a {
 	animation: wiggle 1s infinite;
 	&:nth-child(2) {
@@ -43,22 +45,24 @@ footer a {
 	}
 }
 
+// animation de soulignement des titres de section de menu
 .souligner {
 	position: relative;
-}
-.souligner:before {
-	content: "";
-	position: absolute;
-	width: 0;
-	height: 3px;
-	bottom: 0;
-	left: 0;
-	background: linear-gradient(90deg, rgba(255,0,67,1) 0%, rgba(255,241,0,1) 100%);
-	visibility: hidden;
-	transition: all 0.3s ease-in-out;
-}
-
-.souligner:hover:before {
-	visibility: visible;
-	width: 100%;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 3px;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(90deg, rgba(255,0,67,1) 0%, rgba(255,241,0,1) 100%);
+		visibility: hidden;
+		transition: all 0.3s ease-in-out;
+	}
+	&:hover {
+		&::after {
+		visibility: visible;
+		width: 100%;
+		}
+	}
 }

@@ -5,56 +5,150 @@
 @import url("https://fonts.cdnfonts.com/css/komika-text");
 body {
   margin: auto;
-  font-size: 1vw;
+  background-color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 700px) {
+  .wrapper {
+    align-items: center;
+  }
+}
+
+#ohmyfood {
+  margin: 0;
+  background: no-repeat url("../Images/15718411148892_Logo-ohmyfood.png") center/contain #579c87;
+  height: 10vh;
+}
+
+.cadre {
+  margin: 20 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: 700px) {
+  .cadre {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1280px;
+  }
+}
+
+.entetes {
+  margin: 20px;
+  display: block;
+  width: 90%;
+  height: 127vw;
+  box-shadow: 4px 4px 1em grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+@media screen and (min-width: 700px) {
+  .entetes {
+    width: 44vw;
+    height: 64vw;
+    max-width: 500px;
+    max-height: 707px;
+  }
+}
+.entetes--LNE {
+  background-color: #fcdfdb;
+  color: #3d1319;
+}
+.entetes--LCF {
+  background-color: #fff5fe;
+  color: #c77412;
+}
+.entetes--LDP {
+  background-color: #f9f9f9;
+  color: #0887fb;
+}
+.entetes--LPG {
+  background-color: #fdfffd;
+  color: #72bf56;
+}
+
+.pageGarde {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: all 1s;
+}
+.pageGarde:hover {
+  transform: scale(1.15);
+  opacity: 0.5;
+}
+.pageGarde__img {
+  width: 25%;
+}
+.pageGarde__logo {
+  font-size: 6vw;
+}
+@media screen and (min-width: 700px) {
+  .pageGarde__logo {
+    font-size: 1.8rem;
+  }
+}
+.pageGarde__logo--LNE {
+  font-family: Devonshire, sans-serif;
+}
+.pageGarde__logo + .pageGarde__menuText--LNE {
+  color: #3d1319;
+  font: 3em "Komika Text", sans-serif;
+  margin: 0;
+}
+.pageGarde__logo--LCF {
+  font-family: "croissant one", sans-serif;
+  background: linear-gradient(90deg, #e69630 0%, #8f5aff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.pageGarde__logo + .pageGarde__menuText--LCF {
+  color: #c77412;
+  font: 3em sans-serif, sans-serif;
+  margin: 0;
+}
+.pageGarde__logo--LDP {
+  font-family: "Dancing Script", sans-serif;
+  background: linear-gradient(90deg, #2252e5 0%, #7abefb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.pageGarde__logo + .pageGarde__menuText--LDP {
+  color: #0887fb;
+  font: 3em "Komika Text", sans-serif;
+  margin: 0;
+}
+.pageGarde__logo--LPG {
+  font-family: "Kaushan Script", sans-serif;
+  background: linear-gradient(90deg, #3e923a 0%, #bdfe7e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.pageGarde__logo + .pageGarde__menuText--LPG {
+  color: #72bf56;
+  font: 3em "Komika Text", sans-serif;
+  margin: 0;
 }
 
 footer, button {
   background-color: #579c87;
   color: #fdcb46;
-  text-align: center;
-  font-size: 2rem;
+  font-size: 1.5em;
   padding: 10px;
-}
-
-header {
-  background: no-repeat url("../Images/15718411148892_Logo-ohmyfood.png") center/contain #579c87;
-  height: 10vh;
-}
-
-#logo {
-  margin: 0;
-}
-
-section {
-  width: 70%;
-  margin: 20px auto;
-  background-color: white;
-  color: #fdcb46;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-article {
-  margin: 20px;
-  width: 40%;
-  box-shadow: 4px 4px 1em grey;
-  position: relative;
-}
-article .center {
-  width: 100%;
-  vertical-align: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-article a {
-  display: block;
-  height: 100%;
-  padding-top: 141.42%;
 }
 
 button {
@@ -78,200 +172,346 @@ footer a {
   margin: 0px;
   color: #fdcb46;
   text-decoration: none;
+  text-align: center;
 }
 
-h1 {
-  text-align: center;
+.enteteDetail {
   font-size: 3rem;
 }
+@media screen and (max-width: 700px) {
+  .enteteDetail {
+    display: none;
+  }
+}
 
-.menu-LNE {
+@media screen and (min-width: 700px) {
+  .detail {
+    margin: 20 auto;
+    width: 90%;
+    max-width: 1180px;
+    height: 127vw;
+    max-height: 1669px;
+  }
+}
+.detail__LNE {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  background-color: #fcdfdb;
-  font-size: 2vw;
-  color: #3d1319;
-}
-.menu-LNE h2 {
-  font-family: "Komika Text", sans-serif;
-  color: #3d1319;
-}
-.menu-LNE .logo-LNE {
-  font-family: Devonshire, sans-serif;
-  color: #3c1218;
-  text-align: center;
-}
-.menu-LNE .note {
-  width: 2em;
-}
-
-.detail-LNE {
-  width: 60vw;
-  height: 85vw;
-  font-family: "Komika Text", sans-serif;
-  padding: 0px 50px;
+  align-items: center;
   margin: auto auto 120px auto;
-  font-size: 1.8vw;
-  color: #3d1319;
+  background-color: #fcdfdb;
 }
-.detail-LNE h3 {
+@media screen and (min-width: 700px) {
+  .detail__LNE {
+    height: 100%;
+    justify-content: space-evenly;
+  }
+}
+.detail__LNE .logo__LNE {
   text-align: center;
-  margin-top: 50px;
-  line-height: 16px;
+  font: 2rem Devonshire, sans-serif;
 }
-.detail-LNE h3 .left {
-  float: left;
+.detail__LNE .logo__LNE--img {
   width: 25%;
 }
-.detail-LNE h3 .right {
-  float: right;
-  width: 25%;
+@media screen and (min-width: 700px) {
+  .detail__LNE .logo__LNE {
+    font-size: 4rem;
+  }
 }
 
-.menu-LCF {
+.entree__LNE,
+.plat__LNE,
+.dessert__LNE {
+  width: 90%;
+  font-family: "Komika Text", sans-serif;
+  font-size: 1.5em;
+  color: #3d1319;
+}
+@media screen and (max-width: 700px) {
+  .entree__LNE,
+.plat__LNE,
+.dessert__LNE {
+    font-size: 5vw;
+  }
+}
+
+.titre__LNE {
+  text-align: center;
+  width: 100%;
+  line-height: 8px;
+}
+@media screen and (min-width: 700px) {
+  .titre__LNE {
+    font-size: 1.5rem;
+  }
+}
+.titre__LNE--left {
+  width: 20%;
+  float: left;
+}
+@media screen and (min-width: 700px) {
+  .titre__LNE--left {
+    width: 25%;
+  }
+}
+.titre__LNE--right {
+  width: 20%;
+  float: right;
+}
+@media screen and (min-width: 700px) {
+  .titre__LNE--right {
+    width: 25%;
+  }
+}
+
+.detail__LCF {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  margin: auto auto 120px auto;
   background-color: #fff5fe;
-  font-size: 2vw;
-  color: #c77412;
 }
-.menu-LCF h2 {
-  font-family: "croissant one", sans-serif;
-  color: #c77412;
+@media screen and (min-width: 700px) {
+  .detail__LCF {
+    height: 100%;
+    justify-content: space-evenly;
+  }
 }
-.menu-LCF .logo-LCF {
-  font-family: "croissant one", sans-serif;
-  background: linear-gradient(90deg, #e69630 0%, #8f5aff 100%);
+.detail__LCF .logo__LCF {
   text-align: center;
+  font: 2rem "croissant one", sans-serif;
+  background: linear-gradient(90deg, #e69630 0%, #8f5aff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media screen and (min-width: 700px) {
+  .detail__LCF .logo__LCF {
+    font-size: 4rem;
+  }
+}
 
-.detail-LCF {
-  width: 60vw;
-  height: 85vw;
-  font-family: "Komika Text", sans-serif;
-  padding: 0px 50px;
-  margin: auto auto 120px auto;
-  font-size: 1.8vw;
-  color: #000;
+.entree__LCF,
+.plat__LCF,
+.dessert__LCF {
+  width: 90%;
+  font-family: sans-serif, sans-serif;
+  font-size: 1.3rem;
 }
-.detail-LCF h3 {
+@media screen and (max-width: 700px) {
+  .entree__LCF,
+.plat__LCF,
+.dessert__LCF {
+    font-size: 3.6vw;
+  }
+}
+
+.titre__LCF {
   text-align: center;
-  margin-top: 50px;
-  line-height: 16px;
+  width: 100%;
+  line-height: 8px;
 }
-.detail-LCF h3 .left {
+@media screen and (min-width: 700px) {
+  .titre__LCF {
+    font-size: 1.5rem;
+  }
+}
+.titre__LCF--left {
+  width: 20%;
   float: left;
-  width: 25%;
 }
-.detail-LCF h3 .right {
+@media screen and (min-width: 700px) {
+  .titre__LCF--left {
+    width: 25%;
+  }
+}
+.titre__LCF--right {
+  width: 20%;
   float: right;
-  width: 25%;
   transform: scaleX(-1);
 }
-.detail-LCF .entree {
+@media screen and (min-width: 700px) {
+  .titre__LCF--right {
+    width: 25%;
+  }
+}
+
+.detail__LDP {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto auto 120px auto;
+  background-color: #f9f9f9;
+}
+@media screen and (min-width: 700px) {
+  .detail__LDP {
+    height: 100%;
+    justify-content: space-evenly;
+  }
+}
+.detail__LDP .logo__LDP {
+  text-align: center;
+  font: 2rem "Dancing Script", sans-serif;
+  background: linear-gradient(90deg, #2252e5 0%, #7abefb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (min-width: 700px) {
+  .detail__LDP .logo__LDP {
+    font-size: 4rem;
+  }
+}
+
+.entree__LDP,
+.plat__LDP,
+.dessert__LDP {
+  width: 90%;
+  font-family: "Komika Text", sans-serif;
+  font-size: 1.5rem;
+  color: #3f3f3f;
+}
+@media screen and (max-width: 700px) {
+  .entree__LDP,
+.plat__LDP,
+.dessert__LDP {
+    font-size: 5vw;
+  }
+}
+
+.titre__LDP {
+  text-align: center;
+  width: 100%;
+  line-height: 8px;
+}
+@media screen and (min-width: 700px) {
+  .titre__LDP {
+    font-size: 1.5rem;
+  }
+}
+.titre__LDP--left {
+  width: 20%;
+  float: left;
+}
+@media screen and (min-width: 700px) {
+  .titre__LDP--left {
+    width: 25%;
+  }
+}
+.titre__LDP--right {
+  width: 20%;
+  float: right;
+  transform: scaleX(-1);
+}
+@media screen and (min-width: 700px) {
+  .titre__LDP--right {
+    width: 25%;
+  }
+}
+
+.detail__LPG {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto auto 120px auto;
+  background-color: #fdfffd;
+}
+@media screen and (min-width: 700px) {
+  .detail__LPG {
+    height: 100%;
+    justify-content: space-evenly;
+  }
+}
+.detail__LPG .logo__LPG {
+  text-align: center;
+  font: 2rem "Kaushan Script", sans-serif;
+  background: linear-gradient(90deg, #3e923a 0%, #bdfe7e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (min-width: 700px) {
+  .detail__LPG .logo__LPG {
+    font-size: 4rem;
+  }
+}
+
+.entree__LPG,
+.plat__LPG,
+.dessert__LPG {
+  width: 90%;
+  font-family: "Komika Text", sans-serif;
+  font-size: 1.5rem;
+  color: #0c0c0c;
+}
+@media screen and (max-width: 700px) {
+  .entree__LPG,
+.plat__LPG,
+.dessert__LPG {
+    font-size: 5vw;
+  }
+}
+
+.titre__LPG {
+  text-align: center;
+  width: 100%;
+  line-height: 8px;
+}
+@media screen and (min-width: 700px) {
+  .titre__LPG {
+    font-size: 1.5rem;
+  }
+}
+.titre__LPG--left {
+  width: 20%;
+  float: left;
+}
+@media screen and (min-width: 700px) {
+  .titre__LPG--left {
+    width: 25%;
+  }
+}
+.titre__LPG--right {
+  width: 20%;
+  float: right;
+  transform: scaleX(-1);
+}
+@media screen and (min-width: 700px) {
+  .titre__LPG--right {
+    width: 25%;
+  }
+}
+
+.logo__bottom {
+  font-family: devonshire, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+.logo__bottom--img {
+  vertical-align: middle;
+  width: 12%;
+}
+
+.entree__LCF {
   color: #c67412;
 }
-.detail-LCF .plat {
+
+.plat__LCF {
   color: #a6689a;
 }
-.detail-LCF .dessert {
+
+.dessert__LCF {
   color: #6e4ccc;
 }
 
-.menu-LDP {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: #f9f9f9;
-  font-size: 2vw;
-  color: #0887fb;
-}
-.menu-LDP h2 {
-  font-family: "Komika Text", sans-serif;
-  color: #0887fb;
-}
-.menu-LDP .logo-LDP {
-  font-family: "Dancing Script", sans-serif;
-  background: linear-gradient(90deg, #2252e5 0%, #7abefb 100%);
-  text-align: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.detail-LDP {
-  width: 60vw;
-  height: 85vw;
-  font-family: "Komika Text", sans-serif;
-  padding: 0px 50px;
-  margin: auto auto 120px auto;
-  font-size: 1.8vw;
-  color: #3f3f3f;
-}
-.detail-LDP h3 {
-  text-align: center;
-  margin-top: 50px;
-  line-height: 16px;
-}
-.detail-LDP h3 .left {
-  float: left;
-  width: 25%;
-}
-.detail-LDP h3 .right {
+.entree--prix, .plat--prix, .dessert__prix {
   float: right;
-  width: 25%;
-  transform: scaleX(-1);
 }
-
-.menu-LPG {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: #fdfffd;
-  font-size: 2vw;
-  color: #72bf56;
-}
-.menu-LPG h2 {
-  font-family: "Komika Text", sans-serif;
-  color: #72bf56;
-}
-.menu-LPG .logo-LPG {
-  font-family: "Kaushan Script", sans-serif;
-  background: linear-gradient(90deg, #3e923a 0%, #bdfe7e 100%);
-  text-align: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.detail-LPG {
-  width: 60vw;
-  height: 85vw;
-  font-family: "Komika Text", sans-serif;
-  padding: 0px 50px;
-  margin: auto auto 120px auto;
-  font-size: 1.8vw;
-  color: #0c0c0c;
-}
-.detail-LPG h3 {
-  text-align: center;
-  margin-top: 50px;
-  line-height: 16px;
-}
-.detail-LPG h3 .left {
-  float: left;
-  width: 25%;
-}
-.detail-LPG h3 .right {
-  float: right;
-  width: 25%;
-  transform: scaleX(-1);
-}
-
-.prix {
-  float: right;
+@media screen and (max-width: 700px) {
+  .entree--prix, .plat--prix, .dessert__prix {
+    color: red;
+  }
 }
 
 .boing {
@@ -322,8 +562,7 @@ footer a:nth-child(2) {
 .souligner {
   position: relative;
 }
-
-.souligner:before {
+.souligner::after {
   content: "";
   position: absolute;
   width: 0;
@@ -334,8 +573,7 @@ footer a:nth-child(2) {
   visibility: hidden;
   transition: all 0.3s ease-in-out;
 }
-
-.souligner:hover:before {
+.souligner:hover::after {
   visibility: visible;
   width: 100%;
 }

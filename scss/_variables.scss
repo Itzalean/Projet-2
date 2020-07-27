@@ -1,8 +1,16 @@
+@import url('https://fonts.cdnfonts.com/css/devonshire');
+@import url('https://fonts.cdnfonts.com/css/croissant-one');
+@import url('https://fonts.cdnfonts.com/css/dancing-script');
+@import url('https://fonts.cdnfonts.com/css/kaushan-script');
+
+@import url('https://fonts.cdnfonts.com/css/komika-text');
+
+$restos: LNE LCF LDP LPG;
+$nbRestos: length($restos);
 $main-corps-col: white;
 $main-parts-col: #579c87;
 $main-text-col: #fdcb46;
 
-$restos: LNE LCF LDP LPG;
 $fonts-garde: Devonshire 'croissant one' 'Dancing Script' 'Kaushan Script';
 $menu-bg: #fcdfdb #fff5fe #f9f9f9 #fdfffd;
 $font-colors: #3d1319 #c77412 #0887fb #72bf56;
@@ -10,4 +18,22 @@ $carte-font-colors: #3d1319 #000 #3f3f3f #0c0c0c;
 $gradient-from: 0, rgba(230,150,48,1), rgba(34,82,229,1), rgba(62,146,58,1);
 $gradient-to: 0, rgba(143,90,255,1), rgba(122,190,251,1), rgba(189,254,126,1);
 
-$menu-font: "Komika Text", nth($fonts-garde, 2), "Komika Text", "Komika Text";
+$menu-font: "Komika Text", sans-serif, "Komika Text", "Komika Text";
+$mobile-font-size: 5vw 3.6vw 5vw 5vw;
+$nMobile-font-size: 1.5em 1.3rem 1.5rem 1.5rem;
+
+$breakpoints: (
+  desktop: 700px
+);
+
+@mixin not-mobile {
+  @media screen and (min-width: map-get($breakpoints, desktop)){
+      @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: map-get($breakpoints, desktop)){
+      @content;
+  }
+}

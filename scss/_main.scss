@@ -1,58 +1,107 @@
-@mixin main-page($background-col) {
-	background-color: $background-col;
-	color: $main-text-col;
-	text-align: center;
-}
-
 body {
 	margin: auto;
-	font-size: 1vw;
+	background-color: $main-corps-col;
 }
 
-footer, button {
-	@include main-page($main-parts-col);
-	font-size: 2rem;
-	padding: 10px;
-
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@include not-mobile {
+		align-items: center;
+	}
 }
 
-header {
+// Logo ojmyfood, utilisé sur toutes les pages
+#ohmyfood {
+	margin: 0;
 	background: no-repeat url("../Images/15718411148892_Logo-ohmyfood.png") center/contain $main-parts-col;
 	height: 10vh;
 }
 
-#logo {
-  margin: 0;
-}
-
-section {
-	width: 70%;
-	margin: 20px auto;
-	@include main-page($main-corps-col);
+// section
+.cadre {
+	margin: 20 auto;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	@include not-mobile {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		max-width: 1280px;
+	}
 }
 
-article {
+// Lien pour changement de page, contient l'ensemble de la page de garde du menu
+.entetes {
 	margin: 20px;
-	width: 40%;
+	display: block;
+	width: 90%;
+	height: 127vw;
 	box-shadow: 4px 4px 1em grey;
-	position: relative;
-	.center {
-		width: 100%;
-		vertical-align: 50%;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	@include not-mobile {
+		width: 44vw;
+		height: 64vw;
+		max-width: 500px;
+		max-height: 707px;
 	}
-	a {
-		display: block;
-		height: 100%;
-		padding-top: 141.42%;
+	@for $i from 1 through length($restos) {
+		&--#{nth($restos, $i)} {
+			background-color: nth($menu-bg, $i);
+			color: nth($font-colors, $i);
+		}
 	}
+}
+.pageGarde {
+	width: 90%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 1;
+	transition: all 1s;
+	&:hover {
+		transform: scale(1.15);
+		opacity: 0.5;
+	}
+	&__img {
+		width: 25%;
+	}
+	&__logo {
+		font-size: 6vw;
+		@include not-mobile {
+			font-size: 1.8rem;
+		}
+		@for $i from 1 through $nbRestos {
+			&--#{nth($restos, $i)} {
+				font-family: nth($fonts-garde, $i), sans-serif;
+				@if (nth($restos, $i) != "LNE") {
+					background: linear-gradient(90deg, nth($gradient-from, $i) 0%, nth($gradient-to, $i) 100%);
+				    -webkit-background-clip: text;
+				    -webkit-text-fill-color: transparent;
+				}
+			}
+			& + .pageGarde__menuText--#{nth($restos, $i)} {
+				color: nth($font-colors, $i);
+				font: 3em nth($menu-font, $i), sans-serif;
+				margin: 0;
+			}
+		}
+	}
+}
+
+footer, button {
+	background-color: $main-parts-col;
+	color: $main-text-col;
+	font-size: 1.5em;
+	padding: 10px;
 }
 
 button {
@@ -62,6 +111,7 @@ button {
 	border-radius: 10px;
 }
 
+// Footer: Affiché tout le temps et sur toutes les pages
 footer {
 	position: fixed;
 	bottom: 0;
@@ -75,5 +125,6 @@ footer {
 		margin: 0px;
 		color: $main-text-col;
 		text-decoration: none;
+		text-align: center;
 	}
 }
